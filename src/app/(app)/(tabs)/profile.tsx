@@ -1,12 +1,13 @@
 import Slider from "@react-native-community/slider"
 import { observer } from "mobx-react-lite"
 import React from "react"
-import { TextStyle, View, ViewStyle } from "react-native"
+import { LayoutAnimation, TextStyle, View, ViewStyle } from "react-native"
 import { Button, Screen, Text, TextField, Toggle } from "src/components"
 import { TxKeyPath } from "src/i18n"
 import { useStores } from "src/models"
 import { colors, spacing } from "src/theme"
 import { useHeader } from "src/utils/useHeader"
+import { useAppTheme } from "src/utils/useAppTheme"
 
 export default observer(function ProfileScreen() {
   const {
@@ -21,6 +22,13 @@ export default observer(function ProfileScreen() {
     },
     [logout],
   )
+
+  const { setThemeContextOverride, themeContext } = useAppTheme()
+
+  const toggleTheme = React.useCallback(() => {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut) // Animate the transition
+    setThemeContextOverride(themeContext === "dark" ? "light" : "dark")
+  }, [themeContext, setThemeContextOverride])
 
   const { name, location, yoe, bio, openToWork, remote, darkMode, skills, rnFamiliarity, setProp } =
     profile
@@ -103,8 +111,11 @@ export default observer(function ProfileScreen() {
         variant="switch"
         labelPosition="left"
         containerStyle={$textField}
-        value={darkMode}
-        onPress={() => setProp("darkMode", !darkMode)}
+        value={themeContext === "dark"}
+        onPress={() => {
+          setProp("darkMode", !darkMode)
+          toggleTheme()
+        }}
       />
       <Text preset="formLabel" tx="demoProfileScreen.skills" />
       <TextField

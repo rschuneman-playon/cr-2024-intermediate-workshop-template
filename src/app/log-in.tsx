@@ -84,8 +84,19 @@ export default observer(function Login(_props) {
       contentContainerStyle={$screenContentContainer}
       safeAreaEdges={["top", "bottom"]}
     >
-      <Text testID="login-heading" tx="loginScreen.logIn" preset="heading" style={$signIn} />
-      <Text tx="loginScreen.enterDetails" preset="subheading" style={$enterDetails} />
+      <Text
+        testID="login-heading"
+        tx="loginScreen.logIn"
+        preset="heading"
+        style={$signIn}
+        allowFontScaling={false}
+      />
+      <Text
+        tx="loginScreen.enterDetails"
+        preset="subheading"
+        style={$enterDetails}
+        allowFontScaling={false}
+      />
       {attemptsCount > 2 && <Text tx="loginScreen.hint" size="sm" weight="light" style={$hint} />}
 
       <TextField
@@ -101,6 +112,8 @@ export default observer(function Login(_props) {
         helper={error}
         status={error ? "error" : undefined}
         onSubmitEditing={() => authPasswordInput.current?.focus()}
+        LabelTextProps={{ maxFontSizeMultiplier: 2 }}
+        maxFontSizeMultiplier={2}
       />
 
       <TextField
@@ -116,6 +129,8 @@ export default observer(function Login(_props) {
         placeholderTx="loginScreen.passwordFieldPlaceholder"
         onSubmitEditing={login}
         RightAccessory={PasswordRightAccessory}
+        LabelTextProps={{ maxFontSizeMultiplier: 2 }}
+        maxFontSizeMultiplier={2}
       />
 
       <Button
