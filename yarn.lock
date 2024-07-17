@@ -1238,16 +1238,16 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@bacons/apple-targets@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@bacons/apple-targets/-/apple-targets-0.0.3.tgz#452709266849dc0f15ccb0b47b0a621f282824f1"
-  integrity sha512-6uHFOLrt+1jMyxTZdjyaZ8imds9DuG8pKZ+Hz9+8ubwMMQyO+ncrLxGt0dOYDyYNtWPSVYl+/A1OKEcgmZzOEw==
+"@bacons/apple-targets@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@bacons/apple-targets/-/apple-targets-0.0.4.tgz#f4785a7971dadbd95b3a6abafff587cf83411575"
+  integrity sha512-K+txUguWUrMh3Op9nFplhYsem03evLuHgHNvjURZN05x+ZmnPLKfgiX8SykRObQ42qI3lt2y7BrIDmRfrBNEbg==
   dependencies:
-    "@bacons/xcode" "^1.0.0-alpha.9"
+    "@bacons/xcode" "^1.0.0-alpha.13"
     fs-extra "^11.2.0"
     glob "^10.2.6"
 
-"@bacons/xcode@^1.0.0-alpha.9":
+"@bacons/xcode@^1.0.0-alpha.13":
   version "1.0.0-alpha.14"
   resolved "https://registry.yarnpkg.com/@bacons/xcode/-/xcode-1.0.0-alpha.14.tgz#c60ca06ff6215570f27d4c6772e23114e871108f"
   integrity sha512-g+LpLjGy3mK4RtHStUTWsY7zePYawFyfjBorLd21yzw4AJY7CDChTpA1mkKwg2gygzs3h2SrBqD/qlGoh9euAQ==
