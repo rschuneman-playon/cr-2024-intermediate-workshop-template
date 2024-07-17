@@ -98,6 +98,10 @@ const en = {
       4: "I've written a book about it",
     },
     submitButton: "Submit",
+    skillsSelected: {
+      one: "{{count}} skill selected",
+      other: "{{count}} skills selected",
+    },
   },
   demoDebugScreen: {
     howTo: "HOW TO",

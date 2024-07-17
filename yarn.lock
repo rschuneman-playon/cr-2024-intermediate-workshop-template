@@ -8360,7 +8360,7 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-native-android-widget@^0.14.0:
+react-native-android-widget@^0.14.1:
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/react-native-android-widget/-/react-native-android-widget-0.14.1.tgz#5bb5132d087bc4c233185cf1192f9c19573831ab"
   integrity sha512-GF2IXwxKfvTtFwSlqU/NTMHrK8P7FvThJ8X5LZa5F7V+XsHLLakhml0l08+dUta5h9gw/g1TQTqQeycVFaLJjg==

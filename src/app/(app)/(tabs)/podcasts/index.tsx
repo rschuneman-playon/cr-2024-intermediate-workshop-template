@@ -367,3 +367,14 @@ const $emptyState: ThemedStyle<ViewStyle> = ({ spacing }) => ({
 const $emptyStateImage: ImageStyle = {
   transform: [{ scaleX: isRTL ? -1 : 1 }],
 }
+
+const $heading: ViewStyle = {
+  marginBottom: spacing.xxxl,
+}
+
+const $item: ViewStyle = {
+  backgroundColor: colors.palette.neutral100,
+  borderRadius: 8,
+  padding: spacing.lg,
+  marginVertical: spacing.md,
+}
